@@ -1,7 +1,7 @@
 # Submission-1-Prediktif-Analitik-Inflasi-dan-Pengangguran.
 
 # Bab 1. Domain Proyek
-Proyek ini berfokus pada analisis hubungan antara inflasi dan tingkat pengangguran, yang merupakan dua indikator penting dalam ekonomi makro. Inflasi, sebagai kenaikan umum harga barang dan jasa, dapat memengaruhi daya beli masyarakat, sementara tingkat pengangguran mengukur kesehatan pasar tenaga kerja. Pemahaman tentang hubungan antara dua indikator ini penting bagi pembuat kebijakan dan analis ekonomi untuk menyusun kebijakan yang seimbang antara pertumbuhan ekonomi dan stabilitas harga. Melalui analisis data historis, proyek ini berusaha memberikan wawasan berbasis data mengenai pola dan hubungan antara kedua indikator tersebut.
+Proyek ini berfokus pada analisis hubungan antara inflasi dan tingkat pengangguran, yang merupakan dua indikator penting dalam ekonomi makro. Inflasi, sebagai kenaikan umum harga barang dan jasa, dapat memengaruhi daya beli masyarakat, sementara tingkat pengangguran mengukur kesehatan pasar tenaga kerja. Pemahaman tentang hubungan antara dua indikator ini penting bagi pembuat kebijakan dan analis ekonomi untuk menyusun kebijakan yang seimbang antara pertumbuhan ekonomi dan stabilitas harga. Melalui analisis data historis, proyek ini berusaha memberikan wawasan berbasis data mengenai model machine learning terbaik mana yang dapat mengenali pola hubungan antara kedua indikator tersebut.
 
 # Bab 2. Business Understanding
 Problem Statements
@@ -39,19 +39,20 @@ Parameter default digunakan dalam eksperimen awal, sementara kinerja model dinil
 
 # Bab 6. Evaluation
 Metrik evaluasi yang digunakan adalah Mean Squared Error (MSE), yang mengukur rata-rata kesalahan prediksi kuadrat. Hasilnya adalah:
-•	Linear Regression: 
-o	Test MSE: 28.3020
-o	Cross-validation MSE: 30.1179
-•	Random Forest: 
-o	Test MSE: 41.0832
-o	Cross-validation MSE: 43.1988
-Hasil menunjukkan bahwa Linear Regression memiliki kinerja lebih baik dibandingkan Random Forest berdasarkan metrik MSE. Visualisasi distribusi MSE untuk setiap fold dalam cross-validation juga menunjukkan bahwa Linear Regression lebih stabil.
+1. Linear Regression: 
+- Test MSE: 28.3020
+- Cross-validation MSE: 30.1179
+2. Random Forest: 
+- Test MSE: 41.0832
+- Cross-validation MSE: 43.1988
+
+Hasil ini menunjukkan bahwa Linear Regression memiliki kinerja lebih baik dibandingkan Random Forest berdasarkan metrik MSE. Visualisasi distribusi MSE untuk setiap fold dalam cross-validation juga menunjukkan bahwa Linear Regression lebih stabil.
 
 # Daftar Referensi
-•	Gelman, A., & Hill, J. (2007). Data analysis using regression and multilevel/hierarchical models. Cambridge University Press.
-•	Hastie, T., Tibshirani, R., & Friedman, J. (2009). The elements of statistical learning: Data mining, inference, and prediction. Springer.
-•	IBM. (n.d.). What is EDA? Retrieved from https://www.ibm.com/blog/what-is-eda/
-•	James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An introduction to statistical learning: With applications in R. Springer.
-•	Tukey, J. W. (1977). Exploratory data analysis. Pearson.
-•	VanderPlas, J. (2016). Python data science handbook. O’Reilly Media.
+1. Gelman, A., & Hill, J. (2007). Data analysis using regression and multilevel/hierarchical models. Cambridge University Press.
+2. Hastie, T., Tibshirani, R., & Friedman, J. (2009). The elements of statistical learning: Data mining, inference, and prediction. Springer.
+3. IBM. (n.d.). What is EDA? Retrieved from https://www.ibm.com/blog/what-is-eda/
+4. James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An introduction to statistical learning: With applications in R. Springer.
+5. Tukey, J. W. (1977). Exploratory data analysis. Pearson.
+6. VanderPlas, J. (2016). Python data science handbook. O’Reilly Media.
 
