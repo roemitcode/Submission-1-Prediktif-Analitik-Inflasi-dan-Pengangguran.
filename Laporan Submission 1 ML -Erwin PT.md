@@ -47,7 +47,7 @@ o	Test MSE: 41.0832
 o	Cross-validation MSE: 43.1988
 Hasil menunjukkan bahwa Linear Regression memiliki kinerja lebih baik dibandingkan Random Forest berdasarkan metrik MSE. Visualisasi distribusi MSE untuk setiap fold dalam cross-validation juga menunjukkan bahwa Linear Regression lebih stabil.
 
-Daftar Referensi
+# Daftar Referensi
 •	Gelman, A., & Hill, J. (2007). Data analysis using regression and multilevel/hierarchical models. Cambridge University Press.
 •	Hastie, T., Tibshirani, R., & Friedman, J. (2009). The elements of statistical learning: Data mining, inference, and prediction. Springer.
 •	IBM. (n.d.). What is EDA? Retrieved from https://www.ibm.com/blog/what-is-eda/
