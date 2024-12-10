@@ -5,30 +5,43 @@ Proyek ini berfokus pada analisis hubungan antara inflasi dan tingkat penganggur
 
 # Bab 2. Business Understanding
 Problem Statements
-1. Bagaimana performa model Linear Regression dalam memprediksi tingkat pengangguran berdasarkan tingkat inflasi dibandingkan dengan Random Forest?
-2. Model manakah yang memiliki performa lebih baik berdasarkan metrik Mean Squared Error (MSE) pada dataset yang digunakan?
+1. Apakah terdapat hubungan antara tingkat inflasi dan tingkat pengangguran?
    
 Goals
-1. Membandingkan performa prediktif antara Linear Regression dan Random Forest menggunakan dataset yang tersedia.
-2. Menentukan model terbaik untuk memprediksi tingkat pengangguran berdasarkan hasil evaluasi MSE pada data uji.
-
-
+1. Membangun model prediktif untuk memperkirakan hubungan tingkat pengangguran berdasarkan tingkat inflasi
+   
 # Bab 3. Data Understanding
-Dataset yang digunakan adalah "Inflation, Interest and Unemployment Rate" yang diunduh dari Kaggle. Dataset ini terdiri dari beberapa fitur, tetapi fokus proyek adalah pada dua variabel:
-•	Inflation Rate: Tingkat kenaikan harga dalam periode tertentu.
-•	Unemployment Rate: Persentase individu yang menganggur dari total angkatan kerja.
+Dataset yang digunakan adalah "Inflation, Interest and Unemployment Rate" yang diunduh dari Kaggle dengan link unduh :       https://www.kaggle.com/datasets/prasertk/inflation-interest-and-unemployment-rate. 
+
 Dataset mencakup:
 •	Jumlah data: 1066 
-•	Jumlah variabel: 13 kolom, termasuk tahun dan negara. Data yang digunakan hanya data inflasi dan pengangguran
+•	Jumlah variabel: 13 kolom, termasuk tahun dan negara. 
 •	Kondisi data: Beberapa data hilang (missing values) ditemukan dan diatasi menggunakan penghapusan data kosong.
 •	Distribusi variabel: Inflasi memiliki distribusi dengan outliers yang diatasi menggunakan metode IQR.
+
+Dataset yang digunakan memiliki fitur yang tersebar dalam 13 kolom data yang terdiri atas:
+1.  country   : Nama negara atau wilayah yang dianalisis ; jenis data object
+2. year (integer) : Tahun saat data direkam ; jenis data integer
+3. Inflation, consumer prices (annual percent %) : Persentase perubahan tahunan dalam tingkat harga barang dan jasa yang dikonsumsi oleh rumah tangga, yang mengukur inflasi dari perspektif konsumen ; jenis data float
+4. Inflation, GDP deflator (annual percent %)): Persentase perubahan tahunan dalam deflator PDB, yang merupakan ukuran inflasi yang lebih luas yang mencakup semua barang dan jasa yang diproduksi dalam perekonomian, bukan hanya yang dikonsumsi oleh rumah tangga ; jenis data float
+5. Real interest rate (%): Suku bunga nominal yang disesuaikan dengan inflasi, yang mencerminkan biaya pinjaman sebenarnya dan pengembalian riil atas tabungan ; jenis data float
+6. Deposit rate (%): Suku bunga yang dibayarkan oleh lembaga keuangan atas simpanan, biasanya rekening tabungan atau dana lain yang dipegang bank ; jenis data float
+7. Lending rate (%): Suku bunga yang digunakan bank untuk meminjamkan uang kepada peminjam, seperti individu atau bisnis ; jenis data float
+8. Unemployment, total (% of total labor force) (national estimate): Persentase total angkatan kerja yang menganggur, berdasarkan estimasi nasional ; jenis data float
+9. Unemployment, total (% of total labor force) (modeled ILO estimate) : Persentase angkatan kerja yang menganggur, berdasarkan estimasi dari Organisasi Perburuhan Internasional (ILO) ; jenis data float
+10. iso3c: Kode ISO 3166-1 tiga huruf yang mengidentifikasi negara secara unik ; jenis data object
+11. iso2c: Kode negara ISO 3166-1 dua huruf ; jenis data object
+12. admin region: Wilayah administratif tempat negara tersebut berada ; jenis data object
+13. income Level**: Klasifikasi pendapatan suatu negara, seperti "Pendapatan rendah", "Pendapatan menengah ke atas", dll ; jenis data object
+
+Dataset ini terdiri dari beberapa fitur, tetapi fokus proyek adalah pada dua variabel yakni Inflation, GDP deflator (annual percent %)) : dan Unemployment, total (% of total labor force) (national estimate
 
 # Bab 4. Data Preparation
 Proses persiapan data dilakukan secara sistematis:
 1.	Menangani Missing Values: Data hilang dihapus untuk mencegah distorsi dalam analisis.
 2.	Menghilangkan Outliers: Menggunakan metode Interquartile Range (IQR).
-3.	Standarisasi Data: Menggunakan z-score normalization untuk skala data yang konsisten.
-4.	Train-Test Split: Dataset dibagi menjadi data pelatihan (80%) dan pengujian (20%).
+3.	Train-Test Split: Dataset dibagi menjadi data pelatihan (80%) dan pengujian (20%).
+4.	Standarisasi Data: Menggunakan z-score normalization untuk skala data yang konsisten.
 Langkah ini memastikan data siap digunakan dalam proses pemodelan.
 
 # Bab 5. Modeling
@@ -46,7 +59,19 @@ Metrik evaluasi yang digunakan adalah Mean Squared Error (MSE), yang mengukur ra
 - Test MSE: 41.0832
 - Cross-validation MSE: 43.1988
 
-Hasil ini menunjukkan bahwa Linear Regression memiliki kinerja lebih baik dibandingkan Random Forest berdasarkan metrik MSE. Visualisasi distribusi MSE untuk setiap fold dalam cross-validation juga menunjukkan bahwa Linear Regression lebih stabil.
+Dari hasil MSE yang dihasilkan maka dipilih model Linear Regression untuk analisis statistika selanjutnya.
+
+3. Hasil Kuantitatif Statistika dari model Linear Regression :
+- R-squared (koefisien determinasi): 0.0003
+- Koefisien inflasi: -0.0194
+- Nilai p untuk inflasi: 5.3753e-01
+- Hasil: Inflasi memiliki pengaruh yang signifikan terhadap tingkat pengangguran.
+
+# Kesimpulan
+1. Hasil ini menunjukkan bahwa Linear Regression memiliki kinerja lebih baik dibandingkan Random Forest berdasarkan metrik MSE. Visualisasi distribusi MSE untuk setiap fold dalam cross-validation juga menunjukkan bahwa Linear Regression lebih stabil.
+2. Hasil nilai p yang dihasilkan menunjukkan bahwa Inflasi memiliki pengaruh terhadap tingkat pengangguran.
+
+
 
 # Daftar Referensi
 1. Gelman, A., & Hill, J. (2007). Data analysis using regression and multilevel/hierarchical models. Cambridge University Press.
