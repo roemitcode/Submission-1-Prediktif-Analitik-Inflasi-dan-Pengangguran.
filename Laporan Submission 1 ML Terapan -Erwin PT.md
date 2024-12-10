@@ -14,10 +14,10 @@ Goals
 Dataset yang digunakan adalah "Inflation, Interest and Unemployment Rate" yang diunduh dari Kaggle dengan link unduh :       https://www.kaggle.com/datasets/prasertk/inflation-interest-and-unemployment-rate. 
 
 Dataset mencakup:
-•	Jumlah data: 1066 
-•	Jumlah variabel: 13 kolom, termasuk tahun dan negara. 
-•	Kondisi data: Beberapa data hilang (missing values) ditemukan dan diatasi menggunakan penghapusan data kosong.
-•	Distribusi variabel: Inflasi memiliki distribusi dengan outliers yang diatasi menggunakan metode IQR.
+- Jumlah data: 1066
+- Jumlah variabel: 13 kolom, termasuk tahun dan negara.
+- Kondisi data: Beberapa data hilang (missing values) ditemukan dan diatasi menggunakan penghapusan data kosong.
+- Distribusi variabel: Inflasi memiliki distribusi dengan outliers yang diatasi menggunakan metode IQR.
 
 Dataset yang digunakan memiliki fitur yang tersebar dalam 13 kolom data yang terdiri atas:
 1.  country   : Nama negara atau wilayah yang dianalisis ; jenis data object
